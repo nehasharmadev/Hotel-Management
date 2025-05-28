@@ -1,0 +1,32 @@
+<div class="register-form">
+  <form [formGroup]="registerForm" nz-form [nzLayout]="'vertical'" (ngSubmit)="onSubmit()">
+    
+    <nz-form-item>
+      <nz-form-label [nzFor]="'name'" nzRequired>Name</nz-form-label>
+      <nz-form-control [nzValidateStatus]="registerForm.get('name')!">
+        <input nz-input id="name" formControlName="name" placeholder="Enter your name" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzFor]="'email'" nzRequired>Email</nz-form-label>
+      <nz-form-control [nzValidateStatus]="registerForm.get('email')!">
+        <input nz-input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzFor]="'password'" nzRequired>Password</nz-form-label>
+      <nz-form-control [nzValidateStatus]="registerForm.get('password')!">
+        <input nz-input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="registerForm.invalid">Register</button>
+      </nz-form-control>
+    </nz-form-item>
+
+  </form>
+</div>

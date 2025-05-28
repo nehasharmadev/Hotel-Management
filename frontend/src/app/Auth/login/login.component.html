@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" nz-form [nzLayout]="'vertical'">
+  <nz-form-item>
+    <nz-form-label [nzFor]="'email'" [nzRequired]="true">Email</nz-form-label>
+    <nz-form-control [nzErrorTip]="'Please enter a valid email!'">
+      <input nz-input formControlName="email" id="email" placeholder="Enter your email" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'password'" [nzRequired]="true">Password</nz-form-label>
+    <nz-form-control [nzErrorTip]="'Password is required (min 6 characters)'">
+      <input
+        nz-input
+        type="password"
+        formControlName="password"
+        id="password"
+        placeholder="Enter your password"
+      />
+    </nz-form-control>
+  </nz-form-item>
+
+  <button nz-button nzType="primary" [disabled]="loginForm.invalid">Login</button>
+</form>

@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  height: 100vh;
+}
+
+.logo {
+  height: 64px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+nz-sider {
+  min-height: 100vh;
+}
+
+nz-content {
+  margin: 24px 16px 0;
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+nz-footer {
+  text-align: center;
+  background: #f0f2f5;
+  padding: 16px 50px;
+}
+
+ul[nz-menu] {
+  height: 100%;
+  border-right: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+ul[nz-menu] li[nz-menu-item] {
+  color: white !important;
+
+  span {
+    color: white !important;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
